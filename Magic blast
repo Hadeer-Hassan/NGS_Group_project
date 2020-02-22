@@ -1,0 +1,14 @@
+Conda activate ngs1
+
+#Creat project_dirictory
+mkdir /home/hadeer/Desktop/NGS_project && cd NGS_project
+
+#Download_the_data_Set
+wget "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE138485&format=file"
+
+#instal magic blast
+conda install -c bioconda -y magicblast
+
+#download ref
+wget"ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/GRCh38_latest_genomic.fna.gz"
+gunzip GRCh38_latest_genomic.fna.gz -k
