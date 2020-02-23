@@ -1,0 +1,12 @@
+#create and activate conda env
+conda create -y --name ngs1 python=3.6
+Conda activate ngs1
+
+#Creat project dirictory
+mkdir /home/hadeer/Desktop/NGS_project && cd /home/hadeer/Desktop/NGS_project
+
+#install magic blast
+conda install -c bioconda -y magicblast
+
+#create blast data base "indixing of the ref step"
+makeblastdb -in GRCh38_latest_genomic.fna -out GRCh38 -parse_seqids -dbtype nucl 
